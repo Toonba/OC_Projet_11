@@ -1,0 +1,24 @@
+.banner-about {
+  height: 223px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../assets/banner-about.png');
+  border-radius: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 100px 0 100px;
+}
+
+.about-details {
+  margin: 30px 200px;
+}
+
+@media screen and (max-width: 950px) {
+  .banner-about {
+    margin: 0 auto;
+    width: 85%;
+    background-size: 110%;
+  }
+  .about-details {
+    margin: 30px auto;
+    width: 85%;
+  }
+}

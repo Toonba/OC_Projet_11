@@ -1,0 +1,45 @@
+.colapse-container {
+  width: 100%;
+  margin: 15px 0;
+  cursor: pointer;
+}
+
+.colapse-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  border-radius: 5px;
+  color: white;
+  padding: 10px 18px;
+}
+
+.colapse-title h2 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.colapse-description {
+  background-color: #f6f6f6;
+  margin-top: 0;
+  padding: 1em 26px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 24px;
+  font-weight: 400;
+  list-style: none;
+}
+
+.colapse-description li {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 950px) {
+  .colapse-title h2 {
+    font-size: 13px;
+  }
+  .colapse-description {
+    font-size: 12px;
+  }
+}

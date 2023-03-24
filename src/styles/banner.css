@@ -1,0 +1,36 @@
+.banner-bg {
+  height: 223px;
+  width: 85%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/banner-accueil.png');
+  border-radius: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  color: white;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.banner-title br {
+  display: none;
+}
+
+@media screen and (max-width: 950px) {
+  .banner-bg {
+    height: 111px;
+    background-size: 200%;
+    padding: 10px;
+  }
+  .banner-title {
+    font-size: 24px;
+  }
+  .banner-title br {
+    display: block;
+  }
+}

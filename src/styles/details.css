@@ -1,0 +1,17 @@
+.details-container {
+  display: flex;
+  align-items: stretch;
+  margin: 20px 100px;
+  column-gap: 76px;
+}
+
+@media screen and (max-width: 950px) {
+  .details-container {
+    width: 85%;
+    flex-direction: column;
+    margin: 20px auto 0;
+  }
+  .details-container .colapse-container{
+    margin: 10px 0 
+  }
+}
