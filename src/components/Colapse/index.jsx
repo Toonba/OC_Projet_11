@@ -9,8 +9,8 @@ function Colapse({ title, description, type }) {
         <h2>{title}</h2>
         {isOpen ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>}
       </div>
-      {isOpen ? (
-        type !== 'text' ? (
+      <div className={isOpen ? 'content show' : 'content'}>
+        {type !== 'text' ? (
           <ul className="colapse-description">
             {description.map((equipment, index) => (
               <li key={`${equipment}-${index}`}>{equipment}</li>
@@ -18,8 +18,8 @@ function Colapse({ title, description, type }) {
           </ul>
         ) : (
           <p className="colapse-description"> {description}</p>
-        )
-      ) : null}
+        )}
+      </div>
     </aside>
   )
 }

@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import Footer from '../Footer'
 import React from 'react'
 import '../../styles/error.css'
 
@@ -12,7 +11,6 @@ function Error() {
         <h3>Oups! La page que vous demandez n'existe pas.</h3>
         <Link className='test' to="/">Retourner sur la page d'accueil</Link>
       </section>
-      <Footer />
     </React.Fragment>
   )
 }

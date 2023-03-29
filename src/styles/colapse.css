@@ -21,14 +21,27 @@
 }
 
 .colapse-description {
-  background-color: #f6f6f6;
   margin-top: 0;
-  padding: 1em 26px;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  margin-bottom: 5px;
+  padding: 1em 26px 0.5em;
   font-size: 24px;
   font-weight: 400;
   list-style: none;
+}
+.content {
+  height: 80%;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background-color: #f6f6f6;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  scroll-behavior: smooth;
+}
+
+.show {
+  max-height: 999px;
+  opacity: 1;
 }
 
 .colapse-description li {

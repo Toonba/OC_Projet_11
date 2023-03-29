@@ -26,15 +26,18 @@
   font-weight: 500;
 }
 .tag-item {
+  display: block;
   background-color: #ff6060;
   border-radius: 10px;
   color: white;
   padding: 5px 20px;
-  margin: 0 10px 0 0;
   font-size: 14px;
 }
 
 .tag {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
   margin-top: 20px;
 }
 
@@ -73,6 +76,7 @@
 
 .rating img {
   height: 30px;
+  margin-left: 5px;
 }
 
 @media screen and (max-width: 950px) {

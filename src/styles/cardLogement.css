@@ -32,6 +32,9 @@
 .cardLogement-Item:hover {
   box-shadow: 0 2px 8px rgb(0, 0, 0);
 }
+.cardLogement-Item:hover .cardLogement-picture {
+  transform: scale(1.2);
+}
 
 .cardLogement-Item::after {
   content: '';

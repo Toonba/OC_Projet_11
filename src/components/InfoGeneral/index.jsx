@@ -18,10 +18,9 @@ function InfoGeneral({ title, location, hostName, hostPic, tags, rate }) {
             </span>
           ))}
         </div>
-        
       </article>
       <article className="host-rating">
-      <div className="host">
+        <div className="host">
           <h3>
             {hostName.split(' ')[0]} <br /> {hostName.split(' ')[1]}
           </h3>
@@ -29,7 +28,7 @@ function InfoGeneral({ title, location, hostName, hostPic, tags, rate }) {
             <img src={hostPic} alt={hostName} />
           </div>
         </div>
-        <div className="rating">{range.map((rangeElem) => (rate >= rangeElem ? <img src={starFull} alt="icone étoile remplis" /> : <img src={starEmpty} alt="icone étoile vide" />))}</div>
+        <div className="rating">{range.map((rangeElem, index) => (rate >= rangeElem ? <img key={`${rangeElem}-${index}`} src={starFull} alt="icone étoile remplis" /> : <img src={starEmpty} alt="icone étoile vide" />))}</div>
       </article>
     </section>
   )

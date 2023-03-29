@@ -36,7 +36,6 @@ nav {
   border-bottom: 1px solid;
 }
 @media screen and (max-width: 950px) {
-
   nav {
     column-gap: 20px;
   }
