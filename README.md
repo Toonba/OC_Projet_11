@@ -1,7 +1,7 @@
 # Getting Started with Create React App
 
-link to website preview https://endearing-otter-79a09a.netlify.app
 
+[Site Web Kasa](https://endearing-otter-79a09a.netlify.app)
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
