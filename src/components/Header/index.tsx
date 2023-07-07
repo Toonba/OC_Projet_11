@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
-import Logo from '../../assets/Logo.png'
+import React from 'react'
 import '../../styles/header.css'
+const Logo = require('../../assets/Logo.png') as string
 
 function Header() {
   return (

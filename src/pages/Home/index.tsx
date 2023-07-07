@@ -2,7 +2,7 @@ import React from 'react'
 import CardLogement from '../../components/CardLogement'
 import Banner from '../../components/Banner'
 
-function Home() {
+const Home: React.FC = () => {
   // const { logementTitle } = useParams()
 
   return (

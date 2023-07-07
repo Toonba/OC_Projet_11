@@ -6,10 +6,9 @@ import InfoGeneral from '../../components/InfoGeneral'
 import Details from '../../components/Details'
 import Error from '../Error'
 
-function Logement() {
+const Logement: React.FC = () => {
   const { logementId } = useParams()
   const logement = data.filter((element) => element.id === logementId)
-  console.log(logement)
   if (logement.length === 0) {
     return <Error />
   }

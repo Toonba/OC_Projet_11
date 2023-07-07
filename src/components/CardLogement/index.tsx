@@ -1,8 +1,9 @@
 import data from '../../datas/data'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import '../../styles/cardLogement.css'
 
-function CardLogement() {
+const CardLogement: React.FC = () => {
   return (
     <section className="cardLogement-bg">
       <ul className="cardLogement-list-container">

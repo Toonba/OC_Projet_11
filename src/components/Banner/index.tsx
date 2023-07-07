@@ -1,6 +1,7 @@
+import React from 'react'
 import '../../styles/banner.css'
 
-function Banner() {
+const Banner: React.FC = () => {
   return (
     <section className="banner-bg">
       <h1 className="banner-title">

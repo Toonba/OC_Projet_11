@@ -1,8 +1,18 @@
 import '../../styles/infoGeneral.css'
-import starEmpty from '../../assets/star-empty.svg'
-import starFull from '../../assets/star-full.svg'
+import React from 'react'
+const starEmpty = require('../../assets/star-empty.svg') as string
+const starFull = require('../../assets/star-full.svg') as string
 
-function InfoGeneral({ title, location, hostName, hostPic, tags, rate }) {
+interface InfoGeneralProps {
+  title: string
+  location: string
+  hostName: string
+  hostPic: string
+  tags: string[]
+  rate: string
+}
+
+const InfoGeneral: React.FC<InfoGeneralProps> = ({ title, location, hostName, hostPic, tags, rate }) => {
   const range = [1, 2, 3, 4, 5]
   return (
     <section className="general-info">
@@ -28,7 +38,7 @@ function InfoGeneral({ title, location, hostName, hostPic, tags, rate }) {
             <img src={hostPic} alt={hostName} />
           </div>
         </div>
-        <div className="rating">{range.map((rangeElem, index) => (rate >= rangeElem ? <img key={`${rangeElem}-${index}`} src={starFull} alt="icone étoile remplis" /> : <img key={`${rangeElem}-${index}`} src={starEmpty} alt="icone étoile vide" />))}</div>
+        <div className="rating">{range.map((rangeElem, index) => (parseInt(rate) >= rangeElem ? <img key={`${rangeElem}-${index}`} src={starFull} alt="icone étoile remplis" /> : <img key={`${rangeElem}-${index}`} src={starEmpty} alt="icone étoile vide" />))}</div>
       </article>
     </section>
   )

@@ -1,7 +1,13 @@
 import { useState } from 'react'
+import React from 'react'
 import '../../styles/caroussel.css'
 
-function Caroussel({ source, alt }) {
+interface CarousselProps {
+  source: string[]
+  alt: string
+}
+
+const Caroussel:React.FC<CarousselProps> = ({ source, alt }) => {
   const [count, updateCount] = useState(0)
   return (
     <section className="caroussel">

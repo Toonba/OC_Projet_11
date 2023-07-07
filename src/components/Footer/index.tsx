@@ -1,7 +1,8 @@
-import LogoWhite from '../../assets/Logo-white.png'
 import '../../styles/footer.css'
+import React from 'react'
+const LogoWhite = require('../../assets/Logo-white.png') as string
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer>
       <img className="footer-logo" src={LogoWhite} alt="logo footer" />

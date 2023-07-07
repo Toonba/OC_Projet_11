@@ -1,7 +1,13 @@
 import Colapse from '../Colapse'
+import React from 'react'
 import '../../styles/details.css'
 
-function Details({ description, equipments }) {
+interface DetailsProps {
+  description: string
+  equipments: string[]
+}
+
+const Details: React.FC<DetailsProps> = ({ description, equipments }) => {
   return (
     <section className="details-container">
       <Colapse title="Description" description={description} type="text" />

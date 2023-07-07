@@ -3,9 +3,7 @@ import about from '../../datas/about'
 import React from 'react'
 import '../../styles/about.css'
 
-function About() {
-  // const { logementTitle } = useParams()
-
+const About: React.FC = () => {
   return (
     <React.Fragment>
       <section className='banner-about'>

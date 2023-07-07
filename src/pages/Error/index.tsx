@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import React from 'react'
 import '../../styles/error.css'
 
-function Error() {
+const Error:React.FC = () => {
 
   return (
     <React.Fragment>

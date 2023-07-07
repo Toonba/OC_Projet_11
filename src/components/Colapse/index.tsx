@@ -1,7 +1,13 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import '../../styles/colapse.css'
 
-function Colapse({ title, description, type }) {
+interface ColapseProps {
+  title: string
+  description: string | string[]
+  type: string
+}
+
+const Colapse: React.FC<ColapseProps> = ({ title, description, type }) => {
   const [isOpen, updateIsOpen] = useState(false)
   return (
     <aside className="colapse-container">
@@ -10,7 +16,7 @@ function Colapse({ title, description, type }) {
         {isOpen ? <i className="fa-solid fa-chevron-up"></i> : <i className="fa-solid fa-chevron-down"></i>}
       </div>
       <div className={isOpen ? 'content show' : 'content'}>
-        {type !== 'text' ? (
+        {Array.isArray(description) ? (
           <ul className="colapse-description">
             {description.map((equipment, index) => (
               <li key={`${equipment}-${index}`}>{equipment}</li>
