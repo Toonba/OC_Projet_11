@@ -38,7 +38,7 @@ const InfoGeneral: React.FC<InfoGeneralProps> = ({ title, location, hostName, ho
             <img src={hostPic} alt={hostName} />
           </div>
         </div>
-        <div className="rating">{range.map((rangeElem, index) => (parseInt(rate) >= rangeElem ? <img key={`${rangeElem}-${index}`} src={starFull} alt="icone étoile remplis" /> : <img key={`${rangeElem}-${index}`} src={starEmpty} alt="icone étoile vide" />))}</div>
+        <div className="rating">{range.map((rangeElem, index) => (parseInt(rate) >= rangeElem ? <img key={`${rangeElem}-${index}`} src="../../assets/star-full.svg" alt="icone étoile remplis" /> : <img key={`${rangeElem}-${index}`} src={starEmpty} alt="icone étoile vide" />))}</div>
       </article>
     </section>
   )
