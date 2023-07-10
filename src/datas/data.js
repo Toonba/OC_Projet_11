@@ -1,5 +1,3 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 const data = [
     {
         id: 'c67ab8a7',
@@ -371,4 +369,4 @@ const data = [
         tags: ['Louvre', 'Marais', 'Rivoli']
     }
 ];
-exports.default = data;
+export default data;

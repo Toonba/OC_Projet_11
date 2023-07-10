@@ -1,25 +1,20 @@
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const react_1 = __importDefault(require("react"));
-const client_1 = __importDefault(require("react-dom/client"));
-require("./styles/index.css");
-const react_router_dom_1 = require("react-router-dom");
-const About_1 = __importDefault(require("./pages/About"));
-const Home_1 = __importDefault(require("./pages/Home"));
-const Logements_1 = __importDefault(require("./pages/Logements"));
-const Header_1 = __importDefault(require("./components/Header"));
-const Error_1 = __importDefault(require("./pages/Error"));
-const Footer_1 = __importDefault(require("./components/Footer"));
-client_1.default.createRoot(document.getElementById('root')).render(react_1.default.createElement(react_1.default.Fragment, null,
-    react_1.default.createElement(react_router_dom_1.BrowserRouter, null,
-        react_1.default.createElement(Header_1.default, null),
-        react_1.default.createElement("div", { className: "screen" },
-            react_1.default.createElement(react_router_dom_1.Routes, null,
-                react_1.default.createElement(react_router_dom_1.Route, { path: "/", element: react_1.default.createElement(Home_1.default, null) }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: "/logement/:logementId", element: react_1.default.createElement(Logements_1.default, null) }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: "/about", element: react_1.default.createElement(About_1.default, null) }),
-                react_1.default.createElement(react_router_dom_1.Route, { path: "*", element: react_1.default.createElement(Error_1.default, null) }))),
-        react_1.default.createElement(Footer_1.default, null))));
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './styles/index.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import About from './pages/About';
+import Home from './pages/Home';
+import Logement from './pages/Logements';
+import Header from './components/Header';
+import Error from './pages/Error';
+import Footer from './components/Footer';
+ReactDOM.createRoot(document.getElementById('root')).render(React.createElement(React.Fragment, null,
+    React.createElement(Router, null,
+        React.createElement(Header, null),
+        React.createElement("div", { className: "screen" },
+            React.createElement(Routes, null,
+                React.createElement(Route, { path: "/", element: React.createElement(Home, null) }),
+                React.createElement(Route, { path: "/logement/:logementId", element: React.createElement(Logement, null) }),
+                React.createElement(Route, { path: "/about", element: React.createElement(About, null) }),
+                React.createElement(Route, { path: "*", element: React.createElement(Error, null) }))),
+        React.createElement(Footer, null))));
