@@ -1,7 +1,7 @@
 import '../../styles/infoGeneral.css'
 import React from 'react'
-const starEmpty = require('../../assets/star-empty.svg') as string
-const starFull = require('../../assets/star-full.svg') as string
+const starEmpty = '../../assets/star-empty.svg'
+const starFull = '../../assets/star-full.svg'
 
 interface InfoGeneralProps {
   title: string
@@ -38,7 +38,7 @@ const InfoGeneral: React.FC<InfoGeneralProps> = ({ title, location, hostName, ho
             <img src={hostPic} alt={hostName} />
           </div>
         </div>
-        <div className="rating">{range.map((rangeElem, index) => (parseInt(rate) >= rangeElem ? <img key={`${rangeElem}-${index}`} src="../../assets/star-full.svg" alt="icone étoile remplis" /> : <img key={`${rangeElem}-${index}`} src={starEmpty} alt="icone étoile vide" />))}</div>
+        <div className="rating">{range.map((rangeElem, index) => (parseInt(rate) >= rangeElem ? <i className="fa-solid fa-star"></i> : <i className="fa-regular fa-star"></i>))}</div>
       </article>
     </section>
   )

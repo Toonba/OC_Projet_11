@@ -1,7 +1,7 @@
 import '../../styles/infoGeneral.css';
 import React from 'react';
-const starEmpty = require('../../assets/star-empty.svg');
-const starFull = require('../../assets/star-full.svg');
+const starEmpty = '../../assets/star-empty.svg';
+const starFull = '../../assets/star-full.svg';
 const InfoGeneral = ({ title, location, hostName, hostPic, tags, rate }) => {
     const range = [1, 2, 3, 4, 5];
     return (React.createElement("section", { className: "general-info" },
@@ -20,6 +20,6 @@ const InfoGeneral = ({ title, location, hostName, hostPic, tags, rate }) => {
                     hostName.split(' ')[1]),
                 React.createElement("div", { className: "host-picture" },
                     React.createElement("img", { src: hostPic, alt: hostName }))),
-            React.createElement("div", { className: "rating" }, range.map((rangeElem, index) => (parseInt(rate) >= rangeElem ? React.createElement("img", { key: `${rangeElem}-${index}`, src: "../../assets/star-full.svg", alt: "icone \u00E9toile remplis" }) : React.createElement("img", { key: `${rangeElem}-${index}`, src: starEmpty, alt: "icone \u00E9toile vide" })))))));
+            React.createElement("div", { className: "rating" }, range.map((rangeElem, index) => (parseInt(rate) >= rangeElem ? React.createElement("i", { className: "fa-solid fa-star" }) : React.createElement("i", { className: "fa-regular fa-star" })))))));
 };
 export default InfoGeneral;

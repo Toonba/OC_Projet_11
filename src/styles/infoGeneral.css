@@ -45,12 +45,13 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-end;
   row-gap: 20px;
 }
 
 .host {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
   column-gap: 10px;
 }
@@ -74,8 +75,8 @@
   margin: 0;
 }
 
-.rating img {
-  height: 30px;
+.fa-star {
+  font-size: 30px;
   margin-left: 5px;
 }
 
